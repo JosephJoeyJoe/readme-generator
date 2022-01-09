@@ -1,8 +1,6 @@
 const inquirer = require('inquirer')
 const fs = require('fs');
 const markDown = require('./utils/generateMarkdown');
-
-// TODO: Create an array of questions for user input
 const questions = [
     {
         type: 'input', 
@@ -27,7 +25,7 @@ const questions = [
     {
         type: 'input', 
         name: 'credits',
-        message: 'List contributors to your project.'            
+        message: 'List contributors to your project:'            
     },
     {
         type: 'checkbox', 
@@ -38,25 +36,36 @@ const questions = [
     {
         type: 'input', 
         name: 'features',
-        message: 'List your project features here.'            
+        message: 'List your project features:'            
     },
     {
         type: 'input', 
         name: 'contribute',
-        message: 'List instructions on how to contribute here.'            
+        message: 'List instructions on how to contribute here:'            
     },
     {
         type: 'input', 
         name: 'test',
-        message: 'List test for your projects here.'                        
+        message: 'List test for your projects:'                        
     },
 ];
 
-// TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+function writeToFile(fileName, data) {
+    
+    fs.writeFile('./' + fileName, data, err => {
+        if(err) {
+            return console.error(err) 
+        } else {
+            console.log("Successful writing to " + fileName);
+        }
 
-// TODO: Create a function to initialize app
-function init() {}
+    })   
+};
 
-// Function call to initialize app
+function init() {inquirer.prompt(questions)
+    .then(function(info) {
+        writeToFile("README.md", markDown(info) )
+    })
+};
+
 init();
