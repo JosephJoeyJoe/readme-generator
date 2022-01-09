@@ -18,15 +18,15 @@ function renderLicenseBadge(license) {
 
 
 function renderLicenseLink(license) {
-    let licenseLink = data.license[0];
+    let linkLicense = data.license[0];
     let licenseLink = '';
     if(licenseLink === 'MIT') {
       licenseLink = `<a href = "https://opensource.org/licenses/MIT">License Link</a>`
-    } else if (licenseLink === 'GPLv3') {
+    } else if (linkLicense === 'GPLv3') {
       licenseLink = `<a href = "http://perso.crans.org/besson/LICENSE.html">License Link</a>`
-    } else if (licenseLink === 'IBM') {
+    } else if (linkLicense === 'IBM') {
       licenseLink = `<a href = "https://opensource.org/licenses/IPL-1.0">License Link</a>`
-    } else if(licenseLink === 'Apache') {
+    } else if(linkLicense === 'Apache') {
       licenseLink = `<a href = "https://opensource.org/licenses/Apache-2.0">License Link</a>`
     } else {
       licenseLink = '';
@@ -36,7 +36,7 @@ function renderLicenseLink(license) {
 
 function renderLicenseSection(license) {
     let licenseSection = data.license[0];
-    let licenseSection = ''
+    let Section = ''
     if(licenseSection === 'MIT') {
       licenseSection = `<a href = "https://gist.github.com/ckib16/8732561535ed766cd6b8">MIT Guide</a>`
   
@@ -50,9 +50,9 @@ function renderLicenseSection(license) {
       licenseSection = `<a href = "https://github.com/Medium/opensource/blob/master/apache-license-2.0.md">Apache Guide</a>`
   
     } else {
-      licenseSection = 'N/A'
+      Section = 'N/A'
     }
-    return licenseSection;
+    return Section;
 };
 
 // TODO: Create a function to generate markdown for README
