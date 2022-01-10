@@ -48,6 +48,11 @@ const questions = [
         name: 'test',
         message: 'List test for your projects:'                        
     },
+    {
+        type: 'input',
+        name: 'questions',
+        message: 'Add your GitHub Username:'
+    }
 ];
 
 function writeToFile(fileName, data) {
@@ -56,7 +61,7 @@ function writeToFile(fileName, data) {
         if(err) {
             return console.error(err) 
         } else {
-            console.log("Successful writing to " + fileName);
+            console.log("Successful " + fileName + " created!");
         }
 
     })   

@@ -66,9 +66,9 @@ function generateMarkdown(data) {
     4. [Credits](#credits)
     5. [License](#license)
     6. [Features](#features)
-    7. [Contirbute](#contribute)
+    7. [Contribute](#contribute)
     8. [Test](#test)
-    9. [Questions](#questions)
+    9. [Questions](#test)
   ## Description:
   ${data.description}
   ## Installation:
@@ -87,6 +87,8 @@ function generateMarkdown(data) {
   ${data.contribute}
   ## Test:
   ${data.test}
+  ## Questions:
+  ${data.questions}
   `
 }
 
