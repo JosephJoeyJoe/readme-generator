@@ -12,6 +12,8 @@
    * [Questions](#questions)
   ## Description:
   A command-line application that dynamically generates a professional README.md file from a user's input using Node.js.
+  ![readmegenerator (2)](https://user-images.githubusercontent.com/88215210/148707667-bf33151e-ef1d-4512-b58e-8e4edcc27f53.gif)
+
   ## Installation:
   Copy the contents of this repository onto your machine.
   ## Usage:
@@ -29,5 +31,5 @@
   ## Test:
   
   ## Questions:
-  josephjoeyjoe.github.com
+  github.com/josephjoeyjoe
   
